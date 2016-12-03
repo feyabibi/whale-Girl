@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/www.ico.la_4be99a30c5aefc54e309d6005dbc55c5_64X64.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>鲸鱼少女</title>
+    <style>
+    #home {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    #universe {
+        width: 100%;
+        height: 100%;
+        background: #191919;
+        position: relative;
+        opacity: 1;
+        background: #000;
+    }
+    
+    .bg {
+        width: 10000px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        background: url(img/xkbg.png);
+    }
+    
+    .nebula {
+        width: 400px;
+        height: 400px;
+        /*background: red;*/
+        background: url(img/nebula.png) no-repeat;
+        background-position: 0 0;
+        position: absolute;
+        top: 20%;
+        left: 40%;
+    }
+    /*    .active{
+    	width: 400px;
+    	height: 400px;
+    	background: url(img/nebula.png) no-repeat;
+    	background-position: 0 0;
+    	position: absolute;
+    	top: 20%;
+    	left: -130%;
+    }*/
+    
+    #nebula-list {
+        width: 200px;
+        height: 800px;
+        position: absolute;
+        top: 0%;
+        left: 60%;
+    }
+    
+    #nebula-list li {
+        position: absolute;
+        width: 300px;
+        height: 225px;
+        mix-blend-mode: lighten;
+        /*mix-blend-mode: difference;*/
+        /*background: #fff;*/
+    }
+    #nebula-list li a{
+    	display: none;
+    	width: 100%;
+    	height:100%;
+    }
+    #nebula-list li.active {
+        animation: op 1s infinite;
+        -webkit-animation: op 0.5s infinite;
+        animation-direction: alternate;
+        -webkit-animation-direction: alternate;
+    }
+    
+    @keyframes op {
+        from {
+            opacity: 1
+        }
+        to {
+            opacity: 0
+        }
+    }
+    
+    @-webkit-keyframes op {
+        from {
+            opacity: 1
+        }
+        to {
+            opacity: 0
+        }
+    }
+    .zombie {
+        top: 230px;
+        left: -350px;
+        background: url(img/motion-tim-smiths-10.gif) no-repeat;
+        background-size: cover;
+    }   
+    .machine {
+        left: 0;
+        top: 0;
+        background: url(img/motion-tim-smiths-02.gif) no-repeat;
+        background-size: cover;
+    }
+    
+    .nut {
+        left: 0;
+        top: 225px;
+        background: url(img/motion-tim-smiths-03.gif) no-repeat;
+        background-size: cover;
+    }
+    
+    .FallingSkies {
+        top: 450px;
+        left: 0;
+        width: 160px;
+        height: 194px;
+        background: url(img/motion-tim-smiths-01.gif) no-repeat;
+        background-size: cover;
+    }
+    
+    .astronaut {
+        width: 50px;
+        height: 60px;
+        background: url(img/yhy.png) no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 25%;
+        left: -40%;
+    }
+    
+    .whale {
+        width: 400px;
+        height: 200px;
+        background: url(img/jy1.png) no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 35%;
+        left: -30%;
+        opacity: 1;
+    }
+    
+    .whale:hover {
+        cursor: pointer;
+    }
+    
+    .texts {
+        width: 505px;
+        height: 0px;
+        position: absolute;
+        top: 45%;
+        left: 56%;
+        font-size: 50px;
+        color: #fff;
+        opacity: 0;
+        display: none;
+        text-align: center;
+        line-height: 50px;
+        background: transparent;
+        box-shadow: 0px 25px 200px 25px #BAB7B7;
+        font-family: 'pinghei';
+    }
+    
+    .tip {
+        width: 120px;
+        height: 0px;
+        position: absolute;
+        top: 45%;
+        left: 86%;
+        font-size: 30px;
+        color: #fff;
+        opacity: 1;
+        /*display: none;*/
+        text-align: center;
+        line-height: 50px;
+        background: transparent;
+        box-shadow: 0px 20px 200px 10px #BAB7B7;
+        font-family: 'pinghei';
+    }
+    
+    .forward {
+        -moz-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        transform: scaleX(-1);
+        /*IE*/
+        filter: FlipH;
+    }  
+    @font-face {
+        font-family: 'pinghei';
+        src: url('bb5480/pinghei.eot');
+        src: url('bb5480/pinghei.eot?#font-spider') format('embedded-opentype'), url('bb5480/pinghei.woff') format('woff'), url('bb5480/pinghei.ttf') format('truetype'), url('bb5480/pinghei.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    
+    #TransPage {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        background: rgba(250, 250, 250, 0.8);
+    }
+    </style>
+</head>
+
+<body>
+    <div id="home">
+        <!-- nebula -->
+        <div id="universe">
+            <div class="bg"></div>
+            <!-- <div class="nebula"></div> -->
+            <ul id="nebula-list">
+                <li class="zombie"><a href="http://cokibibi.vicp.io/Gramophone/"></a></li>
+                <li class="machine"><a href="http://cokibibi.vicp.io/zombieroam/"></a></li>
+                <li class="nut"><a href="http://cokibibi.vicp.io/nut/"></a></li>
+                <li class="FallingSkies"><a href="http://cokibibi.vicp.io/FallingSkies/"></a></li>
+            </ul>
+            <div class="astronaut"></div>
+            <div class="whale forward"></div>
+            <div class="texts">选择你要收集的星云</div>
+            <div class="tip">选择星球点击进入</div>
+        </div>
+        <div id="TransPage"></div>
+        <!-- <audio id='bgm' src="MP3/塑料巧克力 - 冥王星.mp3" autoplay loof></audio> -->
+    </div>
+</body>
+
+</html>
+<script src="move.js"></script>
+<script>
+var astronaut = document.getElementsByClassName('astronaut')[0];
+var whale = document.getElementsByClassName('whale')[0];
+var bg = document.getElementsByClassName('bg')[0];
+var texts = document.getElementsByClassName('texts')[0];
+var tip = document.getElementsByClassName('tip')[0];
+var nebula = document.getElementsByClassName('nebula')[0];
+var nebulaUl = document.getElementById('nebula-list');
+var nebulaList = nebulaUl.getElementsByTagName('li');
+var nebulaAs = nebulaUl.getElementsByTagName('a');
+var TransPage = document.getElementById('TransPage');
+var universe = document.getElementById('universe');
+var bgm = document.getElementById('bgm');
+var nebulaMoveing = true;
+// 页面被刷新时,白雾退散
+move(TransPage, {
+    opacity: 0
+}, 1500, 'linear', null, function() {
+    move(whale, {
+        left: 80
+    }, 4000, 'linear');
+    move(astronaut, {
+        left: 220
+    }, 4000, 'linear');
+    TransPage.style.display = 'none';
+});
+setInterval(function() {
+    move(bg, {
+        left: -10000
+    }, 400000, 'linear', null, function() {
+        // move(bg,{left:-300},3000,'linear');			
+    });
+}, 500);
+addClass(nebulaList[0], 'active');
+nebulaAs[0].style.display='block';
+// 点击宇宙宇航员运动
+// document.onclick = function(e) {
+//     var MX = e.clientX;
+//     var MY = e.clientY;
+//     move(astronaut, {
+//         left: MX,
+//         top: MY
+//     }, 3000, 'linear', null, function() {});
+// };
+var arrPos = [];
+for (var i = 0; i < nebulaList.length; i++) {
+    arrPos[i] = {};
+    arrPos[i].top = nebulaList[i].offsetTop;
+    arrPos[i].left = nebulaList[i].offsetLeft;
+    arrPos[i].index = i;
+}
+//点击移动到中间位置\
+
+var timer = null;
+var num = 0,
+    ci = 0;
+var dbltimer = true;
+
+for (var i = 0; i < nebulaList.length; i++) {
+    nebulaList[i].index = i;
+    nebulaList[i].onclick = function() {
+        clearTimeout(dbltimer);
+        var that = this;
+        dbltimer = setTimeout(function() {
+            console.log(that.index, arrPos[that.index].index);
+            ci = arrPos[that.index].index;
+            num = 0;
+            for (var i = 0; i < nebulaList.length; i++) {
+                removeClass(nebulaList[i], 'active');
+                nebulaAs[i].style.display='none';
+
+            }
+            if (num >= ci) {
+                addClass(nebulaList[(4 - arrPos[0].index) % 4], 'active');
+            } else {
+                mm();
+                num++;
+            }
+            clearInterval(timer);
+            timer = setInterval(function() {
+                if (num >= ci) {
+                    clearInterval(timer);
+                    addClass(nebulaList[(4 - arrPos[0].index) % 4], 'active');
+                    nebulaAs[(4 - arrPos[0].index) % 4].style.display='block';
+                } else {
+                    mm();
+                    num++;
+                }                
+            }, 450);
+
+
+        }, 300);
+    };
+    nebulaList[i].ondblclick = function() {
+        clearTimeout(dbltimer);
+        if (this.index != (4 - arrPos[0].index) % 4) {
+            return;
+        }
+        // nebulaAs[this.index].style.display='block';
+    };
+
+}
+
+function mm() {
+    arrPos.unshift(arrPos.pop());
+    for (var i = 0; i < nebulaList.length; i++) {
+        move(nebulaList[i], {
+            top: arrPos[i].top,
+            left: arrPos[i].left
+        }, 400, 'linear');
+    }
+}
+
+　　　　 //添加class
+function addClass(obj, className) {
+    var str = obj.className;
+    var arr = str.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === className) {
+            return obj;
+        }
+    }
+    arr.push(className);
+    obj.className = arr.join(" ");
+}
+
+　　　　　 //删除class　
+function removeClass(obj, className) {
+    var str = obj.className;
+    var arr = str.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === className) {
+            arr.splice(i, 1);
+            i--;
+        }
+    }
+    obj.className = arr.join(" ");
+}
+</script>
